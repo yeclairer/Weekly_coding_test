@@ -3,7 +3,8 @@ def solution(price, money, count):
     for i in range(1,count+1):
         new_price += price*i
     answer = new_price - money
+    
+    if answer <= 0:
+        return 0
 
     return answer
-
-print(solution(3,20,4))
